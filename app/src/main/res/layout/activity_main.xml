@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/swDN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Switch"
@@ -21,13 +21,13 @@
         android:id="@+id/space"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintBottom_toTopOf="@+id/rg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+        app:layout_constraintTop_toBottomOf="@+id/swDN" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/rg"
         android:layout_width="153dp"
         android:layout_height="150dp"
         app:layout_constraintBottom_toTopOf="@+id/space2"
@@ -39,14 +39,14 @@
         android:id="@+id/space2"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/rg" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
