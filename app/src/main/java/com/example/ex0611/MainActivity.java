@@ -1,30 +1,28 @@
 package com.example.ex0611;
 
-import android.app.assist.AssistStructure;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     Switch swDN;
     Button btn;
     RadioGroup rgColors;
-    RadioButton rbRed, rbGreen, rbBlue, rbYellow;
-    LinearLayout mainLayout;
+    RadioButton rbRed;
+    RadioButton rbGreen;
+    RadioButton rbBlue;
+    RadioButton rbYellow;
+    LinearLayout TL;
     private int selectedColor = Color.WHITE;
+
 
 
     @Override
@@ -35,42 +33,27 @@ public class MainActivity extends AppCompatActivity {
         swDN = findViewById(R.id.swDN);
         btn = findViewById(R.id.btn);
         rgColors = findViewById(R.id.rgColors);
-        mainLayout = findViewById(R.id.mainLayout);
+        rbRed = findViewById(R.id.rbRed);
+        rbGreen = findViewById(R.id.rbGreen);
+        rbBlue = findViewById(R.id.rbBlue);
+        rbYellow = findViewById(R.id.rbYellow);
+        TL = findViewById(R.id.TL);
 
 
     }
-    public void onSwitchChanged(CompoundButton buttonView, boolean isChecked) {
-        if (isChecked && selectedColor != Color.WHITE) {
-            mainLayout.setBackgroundColor(selectedColor);
-        }
-    }
-
-    public void onRadioGroupChanged(RadioGroup group, int checkedId) {
-        if (checkedId == R.id.rbRed) {
-            selectedColor = Color.RED;
-        } else if (checkedId == R.id.rbGreen) {
-            selectedColor = Color.GREEN;
-        } else if (checkedId == R.id.rbBlue) {
-            selectedColor = Color.BLUE;
-        } else if (checkedId == R.id.rbYellow) {
-            selectedColor = Color.YELLOW;
-        }
 
 
+
+    public void change(View view) {
+        if (rbRed.isChecked()) TL.setBackgroundColor (Color.RED);
+        if (rbGreen.isChecked()) TL.setBackgroundColor (Color.GREEN);
+        if (rbBlue.isChecked()) TL.setBackgroundColor (Color.BLUE);
+        if (rbYellow.isChecked())TL.setBackgroundColor (Color.YELLOW);
         if (swDN.isChecked()) {
-            mainLayout.setBackgroundColor(selectedColor);
+            TL.setBackgroundColor(selectedColor);
         }
-    }
-
-    public void onRadioButtonClicked(View v) {
-
-    }
-
-
-    public void onApplyButtonClicked(View view) {
         if (!swDN.isChecked() && selectedColor != Color.WHITE) {
-            mainLayout.setBackgroundColor(selectedColor);
+            TL.setBackgroundColor(selectedColor);
         }
     }
-
 }
