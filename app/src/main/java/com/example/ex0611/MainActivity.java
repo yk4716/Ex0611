@@ -42,22 +42,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void goSwitch (View view) {
 
-        if (swDN.isChecked()) {
+        if (!swDN.isChecked()) {
             if (rbRed.isChecked()) TL.setBackgroundColor(Color.RED);
             if (rbGreen.isChecked()) TL.setBackgroundColor(Color.GREEN);
             if (rbBlue.isChecked()) TL.setBackgroundColor(Color.BLUE);
             if (rbYellow.isChecked()) TL.setBackgroundColor(Color.YELLOW);
         }
     }
-
     public void change(View view) {
-
-        if (!swDN.isChecked()) {
-            if (rbRed.isChecked()) TL.setBackgroundColor (Color.RED);
-            if (rbGreen.isChecked()) TL.setBackgroundColor (Color.GREEN);
-            if (rbBlue.isChecked()) TL.setBackgroundColor (Color.BLUE);
-            if (rbYellow.isChecked())TL.setBackgroundColor (Color.YELLOW);
-
+        if (swDN.isChecked()) {
+            if (rbRed.isChecked()) TL.setBackgroundColor(Color.RED);
+            if (rbGreen.isChecked()) TL.setBackgroundColor(Color.GREEN);
+            if (rbBlue.isChecked()) TL.setBackgroundColor(Color.BLUE);
+            if (rbYellow.isChecked()) TL.setBackgroundColor(Color.YELLOW);
         }
     }
 }
