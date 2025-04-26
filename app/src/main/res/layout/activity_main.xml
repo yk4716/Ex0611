@@ -9,13 +9,13 @@
 
     <LinearLayout
         android:id="@+id/mainLayout"
-        android:layout_width="413dp"
-        android:layout_height="733dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
         android:id="@+id/swDN"
@@ -40,8 +40,8 @@
 
     <RadioGroup
         android:id="@+id/rgColors"
-        android:layout_width="402dp"
-        android:layout_height="198dp"
+        android:layout_width="405dp"
+        android:layout_height="193dp"
         app:layout_constraintBottom_toTopOf="@+id/space2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,6 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
+        android:onClick="onApplyButtonClicked"
         android:text="Change"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
